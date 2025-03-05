@@ -1,8 +1,9 @@
 class Player{
     private String name;
     private String strategy;
+    private handScore =  pigs.roll();
     public Player(String name){
-        this.name=name;
+        this.name = name;
     }
     public boolean wantsToRoll(int myScore, int handScore, ArrayList<Integer> otherScores, int winningScore){
         return true;
@@ -14,3 +15,4 @@ class Player{
         return strategy;
     }
 }
+
