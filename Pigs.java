@@ -1,7 +1,7 @@
-class pigs{
+class Pigs{
     String pig1;
     String pig2;
-    int possibility;
+    double possibility;
     int score;
     public int roll(){
         possibility = Math.random();
@@ -58,7 +58,7 @@ class pigs{
         return score;
     }
     public void check(){
-        if pig1.equals(pig2){
+        if (pig1.equals(pig2)){
             if (score ==2){
                 score =1;
             }

@@ -1,41 +1,40 @@
 import java.util.ArrayList;
 
-class botKev extends Player{
+class BotKev extends Player{
     int myScore = 0;
     int handScore = 0;
     String strategy;
     ArrayList<Integer> otherScores
-    public botKev(String name, String strategy){
+    public BotKev(String name, String strategy){
         this.name = name;
         super.players.add(this);
         this.strategy = strategy;
     }
-    public void wantsToRoll(){
+    public boolean wantsToRoll(){
         boolean YesRoll =true;
-        handScoreBefore = handScore;
+        // handScoreBefore = handScore;
         ArrayList<Integer> otherScores = getOtherScores(this);
-        super.getInfo();
-        while (YesRoll){
-        if (stratagy.equals("risky")()){
-            YesRoll=stratagyRisky();
-        }
-        else if (stratagy.equals("moderate")()){
-            YesRoll=stratagyModerate());
-        }
-        else{
-            YesRoll=stratagyCautious();
-        }
-        if (YesRoll){
-            handScore+=pigs.roll();
-            if (handScoreBefore==handScore){
-                handScore=0;
-            }
-        }
-        else{
-            myScore+=handScore;
-            YesRoll=false;
-        }
-        }
+        super.getInfo(this);
+        // while (YesRoll){
+        // if (stratagy.equals("risky")()){
+            return stratagyRisky();
+        // }
+        // else if (stratagy.equals("moderate")()){
+        //     YesRoll=stratagyModerate());
+        // }
+        // else{
+        //     YesRoll=stratagyCautious();
+        // }
+        // if (YesRoll){
+        //     handScore+=pigs.roll();
+        //     if (handScoreBefore==handScore){
+        //         handScore=0;
+        //     }
+        // }
+        // else{
+        //     myScore+=handScore;
+        //     YesRoll=false;
+        // }
     }
 
     public int getScore (){
@@ -89,5 +88,9 @@ class botKev extends Player{
             return false;
         }
         return true;
+    }
+    public void addScore(){
+        myScore+=handScore;
+        handScore =0;
     }
 }
