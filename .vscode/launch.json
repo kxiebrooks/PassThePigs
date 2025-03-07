@@ -4,10 +4,13 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
-        
-
-
+        {
+            "type": "java",
+            "name": "PassThePig",
+            "request": "launch",
+            "mainClass": "PassThePig",
+            "projectName": "PassThePigs_a3bbc423"
+        },
         {
             "type": "jdk",
             "request": "launch",
