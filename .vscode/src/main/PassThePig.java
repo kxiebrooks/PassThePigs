@@ -28,7 +28,7 @@ class PassThePig{
             GenericBot.addScore(handScore);
             handScore = 0;
             canRoll = true;
-            if (GenericBot.getScore()>=100){
+            if (GenericBot.getScore() >= 100){
                 System.out.println("Winner is GenericBot");
                 break;
             }
